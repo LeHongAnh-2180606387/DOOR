@@ -11,6 +11,8 @@ public class EventsManager : MonoBehaviour
     public static event Action<CinemachineVirtualCamera> EventCameraChanger;
     public UnityEvent Event;
 
+    public static Action<NPCConversation> EventStartConversation { get; internal set; }
+
     // Phương thức để kích hoạt sự kiện
     public static void SceneChanger()
     {
@@ -34,4 +36,8 @@ public class EventsManager : MonoBehaviour
         EventCameraChanger?.Invoke(newCinemachineVirtualCamera);
     }
 
+    internal static object StartConversationDialogue(NPCConversation conversation)
+    {
+        throw new NotImplementedException();
+    }
 }
