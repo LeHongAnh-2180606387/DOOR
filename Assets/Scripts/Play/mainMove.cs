@@ -21,7 +21,7 @@ public class mainMove : MonoBehaviour
     {
         leftAndRight = Input.GetAxis("Horizontal"); // Sửa chính tả và kiểu chữ
         //move
-        rb.velocity = new Vector2(leftAndRight * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(leftAndRight * moveSpeed, rb.linearVelocity.y);
         //flip
         flip();
         anim.SetFloat("move", Mathf.Abs(leftAndRight));

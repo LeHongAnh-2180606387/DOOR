@@ -13,7 +13,7 @@ public class DialogueEditorTrigerZone : MonoBehaviour
         if (other.CompareTag("Player") && !hasTriggered)
         {
             hasTriggered = true;
-            EventsManager.StartConversationDialogue(conversation);
+            object value = EventsManager.StartConversationDialogue(conversation);
         }
     }
 }
